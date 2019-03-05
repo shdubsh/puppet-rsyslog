@@ -27,7 +27,7 @@
 #  }
 #
 define rsyslog::conf (
-    Wmflib::Ensure $ensure    = present,
+    String $ensure            = 'present',
     Optional[String] $content = undef,
     Optional[String] $source  = undef,
     Integer[0, 99] $priority  = 60
